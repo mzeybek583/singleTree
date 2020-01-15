@@ -1,0 +1,59 @@
+
+
+## Machine learning Model
+
+library(caret)
+library(ellipse)
+library(e1071)
+library(kernlab)
+library(randomForest)
+library(rgl)
+library(spatstat)
+library(parallel)
+library(doParallel)
+cluster <- makeCluster(detectCores() - 1) # convention to leave 1 core for OS
+registerDoParallel(cluster)
+veri2 <- read.csv(file = "pcl_normals.txt")
+#veri2 <- cbind(pp,normals,curvature,omnivariance,planarity,linearity,surf_var,anisotropy,dist_nn)
+colnames(veri2) <- c("ID","X","Y","Z","Class", "nx","ny", "nz", "Curvature",
+                     "Omnivariance","Planarity", "Linearity", "Surface_Variance","Anisotropy")
+
+class(veri2)
+#SAmple data
+veri2<- veri2[sample(nrow(veri2), 10000), ]
+
+#veri2 <- as.data.frame(veri2)
+#### Validation ###
+validation_index <- createDataPartition(veri2$Class, p=0.7,list = FALSE)
+validation <- veri2[-validation_index,]
+validation$Class <- factor(validation$Class)
+dataset <- veri2[validation_index,]
+
+####### Dimensions of the dataset #####
+dataset$Class <- factor(dataset$Class)
+dim(dataset)
+sapply(dataset, class)
+head(dataset)
+levels(dataset$Class)
+
+####### Building Models #######
+
+control <- trainControl(method = "cv",number = 10, allowParallel = TRUE)
+metric <- "Accuracy"
+
+set.seed(7)
+#fit.rf <- train(Class~ nx+ny+nz+Curvature + Omnivariance + Planarity + 
+#                 Linearity + Surface_Variance + Anisotropy, data = na.omit(dataset), method = "rf",
+#               metric = metric, trControl = control)
+fit.rf <- train(Class~ nz+Omnivariance + Planarity, data = na.omit(dataset), method = "rf",
+                metric = metric, trControl = control)
+stopCluster(cluster)
+registerDoSEQ()
+plot(fit.rf$finalModel)
+summary(fit.rf)
+print(fit.rf)
+##### Make Predictions #######
+predictions <- predict(fit.rf, validation)
+result <- confusionMatrix(predictions, validation$Class, mode = "everything")
+result
+saveRDS(fit.rf, "./finalModel.rds")
