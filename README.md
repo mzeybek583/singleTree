@@ -14,7 +14,7 @@ Yalnızca refere edilmesi yeterlidir.
 
 Tek ağaç gövdesinin çıkarımı, göğüs çap değeri (DBH), ağaç boyu tespiti vb. pek çok işlem öncesinde önemli bir çalışmayı barındırır.
 
-# How to use
+## How to use
 You can use this code for single tree stem extraction from handheld LiDAR point cloud or other derived point clouds with run in the any R software.
 
 Çalışmada kullanılabilecek kodlar R kodlarıdır. Farklı kütüphanelerden yararlanılarak yazılmıştır. Bu kütüphaneler kodların üst kısımlarında, library(..) şeklinde verilmektedir.
@@ -31,8 +31,9 @@ Sınıflar elde edildikten sonra ayrı sınıf alanlarında veya dosyalarda çı
 
 Not: Bu kodların kullanımı için orta seviye ve üzeri R programlama bilmeniz tavsiye edilir (https://www.r-project.org/).
 
-# Referanslar:
+### Referanslar:
 VATANDAŞLAR, Can, and Mustafa ZEYBEK. "Application of handheld laser scanning technology for forest inventory purposes in the NE Turkey." Turkish Journal of Agriculture and Forestry (2020): 44, doi:10.3906/tar-1903-40.
 
+![Artvin-Kent-Ormanı6-812x566](https://user-images.githubusercontent.com/16136052/75098302-620a9380-55c5-11ea-97a1-cd47a2e2b485.jpg)
 images/Artvin-Kent-Ormanı6-812x566.jpg
 
