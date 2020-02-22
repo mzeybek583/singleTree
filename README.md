@@ -34,3 +34,5 @@ Not: Bu kodların kullanımı için orta seviye ve üzeri R programlama bilmeniz
 # Referanslar:
 VATANDAŞLAR, Can, and Mustafa ZEYBEK. "Application of handheld laser scanning technology for forest inventory purposes in the NE Turkey." Turkish Journal of Agriculture and Forestry (2020): 44, doi:10.3906/tar-1903-40.
 
+images/Artvin-Kent-Ormanı6-812x566.jpg
+
