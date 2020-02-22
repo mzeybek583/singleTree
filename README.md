@@ -37,5 +37,6 @@ VATANDAŞLAR, Can, and Mustafa ZEYBEK. "Application of handheld laser scanning t
 ![Artvin-Kent-Ormanı6-812x566](https://user-images.githubusercontent.com/16136052/75098302-620a9380-55c5-11ea-97a1-cd47a2e2b485.jpg)
 
 ![timthumb](https://user-images.githubusercontent.com/16136052/75098407-de51a680-55c6-11ea-9612-68dfefc1033c.jpeg)
+
 images/Artvin-Kent-Ormanı6-812x566.jpg
 
