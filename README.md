@@ -32,6 +32,11 @@ Sınıflar elde edildikten sonra ayrı sınıf alanlarında veya dosyalarda çı
 Not: Bu kodların kullanımı için orta seviye ve üzeri R programlama bilmeniz tavsiye edilir (https://www.r-project.org/).
 
 ### Referanslar:
+If you are using these codes, please cite the papers below.
+(Eğer bu kodları projelerinizde kullanıyor iseniz aşağıdaki makalelere atıf verebilirsiniz.)
+
+ZEYBEK, M . (2020). El-tipi LiDAR nokta bulutundan tek ağaç gövdesinin otomatik çıkarımında istatistiksel sınıflandırma algoritmalarının performans analizi. Artvin Çoruh Üniversitesi Orman Fakültesi Dergisi , 21 (2) , 0-0 . Retrieved from http://ofd.artvin.edu.tr/tr/issue/54132/689894
+
 VATANDAŞLAR, Can, and Mustafa ZEYBEK. "Application of handheld laser scanning technology for forest inventory purposes in the NE Turkey." Turkish Journal of Agriculture and Forestry (2020): 44, doi:10.3906/tar-1903-40.
 
 ![Artvin-Kent-Ormanı6-812x566](https://user-images.githubusercontent.com/16136052/75098302-620a9380-55c5-11ea-97a1-cd47a2e2b485.jpg)
